@@ -4,8 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emergency Hotline</title>
+  <!-- Tailwindcss CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  
+  <!-- Header section -->
+   <section id="header">
+    <div class="nav-wrapper max-w-[1800px] mx-auto py-6 flex items-center justify-between">
+      <div class="logo flex items-center gap-x-2.5 w-12.5">
+        <img class="w-full h-12.5" src="./assets/logo.png" alt="LOGO">
+        <span class="text-xl/[25px] text-[#006747] font-extrabold">Emergency <br> Service</span>
+      </div>
+      <div class="count flex items-center justify-center gap-x-5">
+        <div class="heart-icon h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+          <span class="text-base/[24px] text-black font-black">0</span>
+          <picture class="w-[30px] h-[30px] overflow-hidden">
+            <img class="w-full h-full bg-cover" src="./assets/heart.png" alt="Icon">
+          </picture>
+        </div>
+        <div class="coin-icon h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+          <span class="text-base/[24px] text-black font-black">0</span>
+          <picture class="w-[30px] h-[30px] overflow-hidden">
+            <img class="w-full h-full bg-cover" src="./assets/coin.png" alt="Icon">
+          </picture>
+        </div>
+        <div class="heart-icon h-12 bg-[#00A63E] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+          <span class="text-base/[24px] text-white font-semibold">2 Copy</span>
+        </div>
+      </div>
+    </div>
+   </section>
 </body>
 </html>

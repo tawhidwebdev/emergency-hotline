@@ -17,25 +17,26 @@
 <body>
   <!-- Header section -->
   <section id="header">
-    <div class="nav-wrapper max-w-[1800px] mx-auto py-4 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
+    <div
+      class="nav-wrapper max-w-[1800px] mx-auto py-4 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4">
       <div class="logo flex items-center justify-center gap-x-2.5 ">
         <img class="w-full h-12.5" src="./assets/logo.png" alt="LOGO">
         <span class="text-xl/[25px] text-[#006747] font-extrabold">Emergency <br> Service</span>
       </div>
       <div class="count flex items-center justify-center gap-x-5 mt-6 sm:mt-0">
-        <div class="heart-icon h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
-          <span class="text-base/[24px] text-black font-black">0</span>
+        <div class="heart h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+          <span id="global-heart-count" class="text-base/[24px] text-black font-black">0</span>
           <picture class="w-[30px] h-[30px] overflow-hidden">
             <img class="w-full h-full bg-cover" src="./assets/heart.png" alt="Icon">
           </picture>
         </div>
-        <div class="coin-icon h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
-          <span class="text-base/[24px] text-black font-black">0</span>
+        <div class="coin h-12 bg-[#41ff6b1a] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+          <span class="text-base/[24px] text-black font-black">100</span>
           <picture class="w-[30px] h-[30px] overflow-hidden">
             <img class="w-full h-full bg-cover" src="./assets/coin.png" alt="Icon">
           </picture>
         </div>
-        <div class="heart-icon h-12 bg-[#00A63E] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
+        <div class="copy-btn h-12 bg-[#00A63E] py-3 px-9 rounded-full flex items-center justify-center gap-x-2.5">
           <span class="text-base/[24px] text-white font-semibold font-[inter]">2 Copy</span>
         </div>
       </div>
@@ -46,8 +47,10 @@
     <div class="max-w-[1880px] w-full mx-auto flex flex-col items-center justify-center gap-y-3 py-3">
       <picture class="w-[72px] sm:w-[92px] h-[72px] sm:h-[92px] overflow-hidden"><img class="w-full h-full bg-cover"
           src="./assets/logo-dark.png" alt=""></picture>
-      <h1 class="text-3xl/normal sm:text-5xl/normal text-white font-semibold font-[hind-madura]">জরুরি সেবা ডিরেক্টরি</h1>
-      <p class="text-base sm:text-xl/normal text-white font-semibold font-[hind-madura] leading-relaxed">সরকারি জরুরি সেবা আপনার হাতের নাগালে
+      <h1 class="text-3xl/normal sm:text-5xl/normal text-white font-semibold font-[hind-madura]">জরুরি সেবা ডিরেক্টরি
+      </h1>
+      <p class="text-base sm:text-xl/normal text-white font-semibold font-[hind-madura] leading-relaxed">সরকারি জরুরি
+        সেবা আপনার হাতের নাগালে
         –<br class="sm:hidden"> গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের একটি প্রকল্প</p>
     </div>
   </section>
@@ -56,209 +59,269 @@
     <div class="max-w-[1880px] w-full min-h-screen  mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div class="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-          <div class="national-emergency bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card data-card-id='1' national-emergency bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="1">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
-              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">জাতীয় জরুরি সেবা</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">National Emergency</h6>
+              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">জাতীয় জরুরি সেবা
+              </h2>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">National
+                Emergency</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">999</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সার্বজনীন</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সার্বজনীন</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex     items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="police bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card police bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="2">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/police.png" alt="">
+                    <img class="bg-cover" src="./assets/police.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
               <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">পুলিশ</h2>
               <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Police</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">999</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">পুলিশ</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">পুলিশ</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="fire-service bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card fire-service bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="3">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/fire-service.png" alt="">
+                    <img class="bg-cover" src="./assets/fire-service.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
-              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">ফায়ার সার্ভিস</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Fire Service</h6>
+              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">ফায়ার সার্ভিস
+              </h2>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Fire
+                Service</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">999</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">ফায়ার</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">ফায়ার</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="ambulance bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card ambulance bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="4">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/ambulance.png" alt="">
+                    <img class="bg-cover" src="./assets/ambulance.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
               <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">অ্যাম্বুলেন্স</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Ambulance</h6>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Ambulance
+              </h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">1994-999999</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">স্বাস্থ্য</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">স্বাস্থ্য</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="women-child-helpline bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card women-child-helpline bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="5">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
-              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">নারী ও শিশু সহায়তা</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Women & Child Helpline</h6>
+              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">নারী ও শিশু
+                সহায়তা</h2>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Women &
+                Child Helpline</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">109</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সহায়তা</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সহায়তা</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="anti-corruption bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card anti-corruption bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="6">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
               <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">দুদক</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Anti-Corruption</h6>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">
+                Anti-Corruption</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">106</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সরকারি</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">সরকারি</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="electricity-outage bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card electricity-outage bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="7">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
-              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">বিদ্যুৎ বিভ্রাট</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Electricity Outage</h6>
+              <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">বিদ্যুৎ বিভ্রাট
+              </h2>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Electricity
+                Outage</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">16216</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">বিদ্যুৎ</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">বিদ্যুৎ</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="brac bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card brac bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="8">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
               <h2 class="text-xl/normal sm:text-2xl/[32px] text-[#111] font-bold font-[hind-madurai]">ব্র্যাক</h2>
               <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Brac</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">16445</span>
-              <span class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">এনজিও</span>
+              <span
+                class="text-base/normal md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">এনজিও</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
-          <div class="bangladesh-railway bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6">
+          <div class="card bangladesh-railway bg-white shadow-md p-8 rounded-xl flex flex-col gap-y-6" data-card-id="9">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <div class="w-15 h-15 bg-[#FFE3E2] rounded-2xl flex items-center justify-center">
                   <div class="w-8 h-8 overflow-hidden bg-cover">
-                  <img class="bg-cover" src="./assets/emergency.png" alt="">
+                    <img class="bg-cover" src="./assets/emergency.png" alt="">
+                  </div>
                 </div>
-                </div>
-                <i class="fa-regular fa-heart text-2xl text-[#5C5C5C]"></i>
+                <i class="heart-icon-card fa-solid fa-heart text-2xl text-[#5C5C5C]"></i>
               </div>
-              <h2 class="text-xl/normal sm:text-2xl/[32px]x] text-[#111] font-bold font-[hind-madurai]">বাংলাদেশ রেলওয়ে</h2>
-              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Bangladesh Railway</h6>
+              <h2 class="text-xl/normal sm:text-2xl/[32px]x] text-[#111] font-bold font-[hind-madurai]">বাংলাদেশ রেলওয়ে
+              </h2>
+              <h6 class="text-base/normal sm:text-lg/normal text-[#5C5C5C] font-normal font-[roboto] mt-0.5">Bangladesh
+                Railway</h6>
             </div>
             <div class="flex flex-col gap-y-0.5">
               <span class="text-2xl/normal md:text-[32px]/normal text-[#111] font-bold font-[roboto]">163</span>
-              <span class="text-base md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">পরিবহন</span>
+              <span
+                class="text-base md:text-lg/normal text-[#5C5C5C] font-normal font-[hind-madurai] bg-[#F2F2F2] px-4 py-2 inline w-fit rounded-full ">পরিবহন</span>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-regular fa-copy"></i>Copy</button>
-              <button class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i class="fa-solid fa-phone"></i>Call</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-[#5C5C5C] bg-white flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-regular fa-copy"></i>Copy</button>
+              <button
+                class="flex-1 border border-[#D4D6D5] rounded-lg px-4 py-4 text-base text-white bg-[#00A63E] flex items-center justify-center gap-x-1.5 cursor-pointer font-[roboto]"><i
+                  class="fa-solid fa-phone"></i>Call</button>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-3 bg-white shadow-md p-6">
+        <!-- Call History Section -->
+        <div class="lg:col-span-3 bg-white shadow-md p-6 rounded-xl">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-xl/[28px] text-[#111] font-medium font-[roboto]"><i class="fa-regular fa-clock mr-2 text-2xl text-[#5C5C5C]"></i>Call History</h2>
-            <button class="text-base/[24px] text-white font-semibold font-[inter] bg-[#00A63E] px-9 py-4 rounded-full cursor-pointer">Clear</button>
+            <h2 class="text-xl/[28px] text-[#111] font-medium font-[roboto]"><i
+                class="fa-regular fa-clock mr-2 text-2xl text-[#5C5C5C]"></i>Call History</h2>
+            <button
+              class="text-base/[24px] text-white font-semibold font-[inter] bg-[#00A63E] px-9 py-4 rounded-full cursor-pointer">Clear</button>
           </div>
           <ul class="mt-4 text-lg/normal font-normal flex flex-col gap-y-2 font-[hind-madurai]">
             <li class="flex items-center justify-between bg-[#FAFAFA] p-4 rounded-lg">
@@ -301,6 +364,7 @@
       </div>
     </div>
   </section>
+  <script src="./script.js"></script>
 </body>
 
 </html>

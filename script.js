@@ -49,4 +49,18 @@ callingButtons.forEach(button => {
   });
 });
 
+// Copy Button Click Functionality
+const copyButtons = document.querySelectorAll('.copy-btn');
+copyButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.card');
 
+    const phoneNumber = card.querySelector('.phone-number');
+
+    if (phoneNumber) {
+      navigator.clipboard.writeText(phoneNumber.textContent).then(() => {
+        alert(`Copied: ${phoneNumber.textContent}`);
+      });
+    }
+  });
+});

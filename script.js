@@ -22,3 +22,31 @@ cardHeartIcon.forEach(icon => {
     }
   });
 });
+
+// Calling Button Click Functionality
+const callingButtons = document.querySelectorAll('.calling-btn');
+const coinCounts = document.getElementById('coin');
+
+callingButtons.forEach(button => {
+  button.addEventListener('click', () => {
+   
+    const card = button.closest('.card');
+
+    const cardSubHeading = card.querySelector('.card-sub-headig');
+    const phoneNumber = card.querySelector('.phone-number');
+
+    alert(
+      `Calling: ${cardSubHeading ? cardSubHeading.textContent : ''} ${phoneNumber ? phoneNumber.textContent : ''}...`
+    );
+
+    let currentCoinCount = parseInt(coinCounts.textContent);
+    if (currentCoinCount >= 20) {
+      currentCoinCount -= 20;
+      coinCounts.textContent = currentCoinCount;
+    } else {
+      alert('No more coins left!');
+    }
+  });
+});
+
+

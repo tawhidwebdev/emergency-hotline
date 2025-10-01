@@ -69,11 +69,23 @@ copyButtons.forEach(button => {
     const card = button.closest('.card');
 
     const phoneNumber = card.querySelector('.phone-number');
+    const copyCount = document.getElementById('copy-count');
 
     if (phoneNumber) {
       navigator.clipboard.writeText(phoneNumber.textContent).then(() => {
-        alert(`Copied: ${phoneNumber.textContent}`);
+        alert(`নাম্বার কপি হয়েছে: ${phoneNumber.textContent}`);
+        // Update Copy Count
+        let currentCopyCount = parseInt(copyCount.textContent);
+        currentCopyCount++;
+        copyCount.textContent = currentCopyCount;
       });
     }
   });
+});
+
+// Call History Clear Button Functionality
+const callHistoryClearBtn = document.getElementById('call-history-clear-btn');
+const callHistoryList = document.getElementById('call-history-list');
+callHistoryClearBtn.addEventListener('click', () => {
+  callHistoryList.innerHTML = '';
 });

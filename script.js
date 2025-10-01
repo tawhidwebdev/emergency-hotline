@@ -29,9 +29,8 @@ const coinCounts = document.getElementById('coin');
 
 callingButtons.forEach(button => {
   button.addEventListener('click', () => {
-   
-    const card = button.closest('.card');
 
+    const card = button.closest('.card');
     const cardSubHeading = card.querySelector('.card-sub-headig');
     const phoneNumber = card.querySelector('.phone-number');
 
@@ -43,8 +42,22 @@ callingButtons.forEach(button => {
     if (currentCoinCount >= 20) {
       currentCoinCount -= 20;
       coinCounts.textContent = currentCoinCount;
+      // Call History List Update
+      const cardHeading = card.querySelector('.card-heading').textContent;
+      const phoneNumber = card.querySelector('.phone-number').textContent;
+      const date = new Date().toLocaleTimeString();
+      const callHistoryList = document.getElementById('call-history-list');
+      const listItem = document.createElement('div');
+      listItem.innerHTML = `<li class="flex items-center justify-between bg-[#FAFAFA] p-4 rounded-lg">
+                              <div class="flex flex-col gap-y-1">
+                                <span class="text-[#111]">${cardHeading}</span>
+                                <span class="text-[#5C5C5C]">${phoneNumber}</span>
+                              </div>
+                              <span class="text-[#111]">${date}</span>
+                            </li>`;
+      callHistoryList.appendChild(listItem);
     } else {
-      alert('No more coins left!');
+      alert('আপনার পর্যাপ্ত কয়েন নেই, কল করতে কমপক্ষে ২০ কয়েন লাগবে।');
     }
   });
 });
